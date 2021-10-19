@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Maquetado de texto en HTML </title>
+	<link rel="stylesheet" type="text/css" href="../css/04-EstilosMaquetadoTexto.css">
+</head>
+
+<body>
+	
+	<h1> MAQUETADO DEL TEXTO CON ETIQUETAS HTML</h1>
+
+	<h2 class="tituloPrin"> Marcado de los párrafos </h2>
+
+	<p class="texto" title="Parrafo introductorio"> Una vez estructurado el <strong>texto en párrafos y secciones</strong>, el siguiente paso es el marcado de los elementos que componen el texto. Los textos habituales están formados por elementos como palabras en <strong>negrita o cursiva,</strong> anotaciones y correcciones, citas a otros documentos externos, etc. <em>HTML</em> proporciona varias etiquetas para marcar cada uno de los diferentes tipos de texto. </p>
+
+	<p title="Párrafo secundario" id="ParrafoAzul" class="texto">Una vez estructurado el texto en <strong class="imp">párrafos y secciones,</strong> el siguiente paso es el marcado de los elementos que componen el texto. Los <em>textos habituales </em>están formados por elementos como <em>palabras</em> en negrita o cursiva, anotaciones y correcciones, citas a otros documentos externos, etc. <strong class="imp">HTML proporciona varias etiquetas </strong> para marcar cada uno de los diferentes tipos de texto. </p>
+
+	<p id="ParrafoVerde" class="texto">Una vez estructurado el texto en párrafos y secciones, el siguiente paso es el marcado de los elementos que componen el texto. Los textos habituales están formados por elementos como palabras en negrita o cursiva, <strong class="imp">anotaciones y correcciones, citas a otros documentos externos, etc.</strong> HTML proporciona varias etiquetas para marcar cada uno de los diferentes tipos de texto.</p>
+	
+	<!-- etiquetas de cabeceira h1, h2 ... h6 -->
+
+	<!-- h${Texto de nivel h$ ...}*6 -->
+
+	<h2 class="tituloPrin">Títulos de las cabeceras. Principal</h2>
+	<h2>Texto de nivel h2 ...</h2>
+	<h3>Texto de nivel h3 ...</h3>
+	<h4>Texto de nivel h4 ...</h4>
+	<h5>Texto de nivel h5 ...</h5>
+	<h6>Texto de nivel h6 ...</h6>
+
+	<!-- blockquote permite citar textos, mostrar un texto extraído de un origen externo. -->
+
+	<h2 class="tituloPrin"> Blockquote </h2>
+	<blockquote >El <strong class="imp">elemento blockquote </strong> permite a los autores insertar citas en forma de bloques de contenido, usualmente compuestas por un párrafo, un grupo de párrafos o un conjunto de muchos otros elementos incluyendo imágenes (img), tablas (table) y artículos (article), entre otros. Esta es la principal diferencia entre este elemento y q, que está diseñado para citar únicamente líneas de texto.</blockquote>
+
+	<!--Para trabajar con abreviaturas tenemos las etiquetas abbr y acronym, con la propiedad title que mostrará el significado de la misma al colocar el puntero encima -->
+
+	<h2 class="tituloPrin"> Abreviaturas </h2>
+	<p class="texto">A linguaxe <acronym title="HyperText Markup Language">HTML</acronym> é estandarizada por a <acronym title="World Web Consortium">W3C</acronym></p>
+
+	<p class="texto">O protocolo <abbr title="Protocolo de Internet">IP</abbr> pertenece al modelo <abbr title="Modelo de Interconexión de sistemas abiertos">OSI</abbr></p>
+
+	<h2 class="tituloPrin">Marcado genérico de texto. Etiqueta span</h2>
+	<p> Esta etiqueta <span >span </span>permite darle formato bien a un párrafo, a una línea o simplemente a un grupo de palabras o una palabra sola. <span >Con span</span>, No tenemos que indicar que es un párrafo o una palabra. </p>
+	
+	<h2 class="tituloPrin">Saltos de línea. Etiqueta br</h2>
+	<p>Empezamos el párrafo y saltamos de línea <br> empezamos una nueva línea <br>
+	y terminamos. <br>  Fin
+	</p>
+
+	<h2 class="tituloPrin">Etiqueta pre</h2>
+	<pre>
+	<p class="texto">
+	   Nombre       Dni   Cuota
+	   **************************
+	   Antonio G.  112233	150
+	   Carmen A.   223365    98
+	   Rosa S.     123456    77
+	   Ana F.      789654   102
+	</p>	
+	</pre>
+
+	<h2 class="tituloPrin"> Superíndices y subíndices </h2>
+	<p class="texto"> La fórmula del agua es H<sub>2</sub>O</p>
+	<p class="texto"> La habitación mide 36 m<sup>2</sup> y necesitaremos 35 m<sup>3</sup> de pintura</p>
+
+	<!--Título con cite (aparecerá en cursiva); citas cortas con <q> y estará entrecomillado.
+	para poner una flecha se pone &rarr -->
+
+	<h2 class="tituloPrin"> Títulos y citas. Caracteres especiales </h2>
+
+	<!-- pondremos el atributo style a la etiqueta p para meterle una sangría izquierda -->
+	<p style="margin-left: 200px">
+	<cite> Frases famosas de la historia son:</cite><br>
+	
+		&rarr;<q>No hay caminos para la paz; la paz es el camino. <acronym title="Mahatma Gandhi">MG</acronym></q> <br>
+		&rarr;<q>No hay que ir para atrás ni para darse impulso. <acronym title="Lao Tsé"> LT</acronym> </q> <br>
+		&rarr;<q>Aprende a vivir y sabrás morir bien. <acronym title="Confucio""> C.</acronym></q> </p>
+
+	<!--Caracteres especiales en html-->
+	<h2 class="tituloPrin">	Más caracteres especiales </h2>
+	<p style="margin-left: 200px"> Si queremos escribir una etiqueta HTML tal cual, es decir transcribir los símbolos < y > deberemos hacerlo de la siguiente manera: <br>
+		poner &lt; para escribir el menor <br>
+		poner &gt; para el símbolo mayor <br>
+		Ejemplo:  &lt;em&gt;  <br>
+
+		Aquí puedes encontrar más caracteres especiales que te pueden resultar de interés:
+		<a href="https://uniwebsidad.com/libros/xhtml/capitulo-3/codificacion-de-caracteres" target="_blank"> Codificación de caracteres en HTML </a>
+	</p>
+</body>
+</html>

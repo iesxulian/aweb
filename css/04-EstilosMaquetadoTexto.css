@@ -1,0 +1,75 @@
+/* aquí va elcódigo CSS para dar estilo */
+		h1 {
+		 	text-align: center;
+		 	font-style: oblique;
+		 	font: Gabriola;
+		 	background-color: #F8E6E9;
+		 	color: #87158B;
+		 	font-style: bold;
+		 	}
+
+		h2, h3, h4, h5, h6 {
+			text-align: center;
+		} 
+
+		/* Definimos identificadores para los párrafos*/
+		#ParrafoAzul {
+			color: blue;
+			}
+		#ParrafoVerde {
+			color: green;
+			}
+		
+		/* etiqueta strong que nos permitirán realzar el texto. Para dar un especial énfasis al texto. Este texto es el de mayor importancia dentro de la página. Aparecerá en negrita */
+
+		strong {  /*Subrayado doble, verde */
+			text-decoration: underline;
+			text-decoration-style: double;
+			text-decoration-color: green;
+			color: green;
+		}
+
+		strong.imp { /*esto aplica a strong con clase imp*/
+			border: 2px solid green;
+			background-color: #E4FAE8;/* dibuxa un borde de grosor 2 pixels continuo de color verde, fondo clarito 	*/
+		}
+
+		/* Se aplica un énfasis sencillo. Aparecerá en cursiva*/
+		em {
+			color: #671180;
+			font-size: 1.5rem;
+		}
+		blockquote{
+			border: 3px dashed green; /*borde verde a guiones*/
+			text-align: center;
+			font-size: 1.5rem;
+			 
+		}
+		span{
+			font:verdana;
+			color:#6F247C;
+			font-size: 1.5rem;
+			text-decoration: underline;
+			text-decoration-style: dotted;
+			text-decoration-color: #6F247C;
+
+		}
+		/*Definimos clases para los párrafosy títulos */
+		.texto{
+			color:red;
+			font-style: italic;
+			margin-left: 200px;
+			margin-right: 200px;
+			text-align: justify;
+		}
+		.tituloPrin{
+			background-color: lightyellow;
+			font-style: bold;
+			color: orange;
+			border: 4px orange dotted;
+			margin-left: 200px;
+			margin-right: 200px;
+			text-align: center;
+			font: gabriola;
+			font-size: 2rem;
+		}
