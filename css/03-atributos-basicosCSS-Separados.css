@@ -1,0 +1,31 @@
+		h1 {color:red;
+			text-align: center;
+			background-color: yellow}
+
+		h2 {
+			text-align: center;
+			color: blue;
+		}
+		#pa{
+			 font-style: oblique; background-color: grey;
+		}
+		.cab1 {
+			text-decoration: underline;/*subrayado*/
+			color: brown;
+			font-style: italic; /*Cursiva */
+			font-weight: bold; /*Negrita */
+		}
+
+		.p1 {
+			color: #6567B3;
+			font-weight: bold; /*negrita*/
+			font-style: italic;
+			text-align: right;
+		}
+		.p2 {
+			color: red;
+			text-indent: 50px;
+			margin-left: 50px;
+			text-align: justify;
+		}
+	

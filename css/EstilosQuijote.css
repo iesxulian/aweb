@@ -1,0 +1,40 @@
+h1 {
+			font-size: 4rem;
+			text-align: center;
+			font-style: italic;
+			font-weight: bold;
+			font-family: Gabriola;
+			color: #F21F1F;
+			background-color: #F8DCDC;
+			margin-right: 100px;
+			margin-left: 100px;
+		}
+
+		h4{
+			text-align: right;
+			font-style: italic;
+			font-family: Gabriola;
+			color: #D24A4A;
+			margin-right: 100px;
+		}
+		.titulosPrin{
+			font-size: 2rem;
+			text-indent: 50px;
+			font-style: italic;
+			font-weight: bold;
+			font-family: Gabriola;
+			color: #722D2D;
+		}
+		.parrafos{
+			text-align: justify;
+			text-indent: 75px;
+			margin-right: 75px;
+			margin-left: 50px;
+		}
+		#parrafoFinal{
+			font-style: italic;
+			color: #B7B5B5;
+			text-align: right;
+			margin-left: 350px;
+			margin-right: 50px;
+		}

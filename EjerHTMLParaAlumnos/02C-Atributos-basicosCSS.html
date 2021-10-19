@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--  Uso de identificadores y clases en la etiqueta style -->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Atributos básicos. Identificadores y clases en CSS</title>
+	<style type="text/css">
+		/* Esta sección es para CSS. Los comentarios aquí van así */
+		/* Formatos en etiquetas HTML */
+		h1 {color:red;
+			text-align: center;
+			background-color: #F7CDCD;
+			font-family: verdana;
+			font-size: 2em}
+
+		h2 {
+			text-align: center;
+			color: blue;
+			font-family: Arial;
+			font-size: 2em;
+			font-style: oblique; 
+			background-color: #E6ECFA;
+			margin-right: 100px;
+			margin-left: 100px
+
+		}
+
+		/* Creación de identificadores. Se aplicará a una etiqueta concreta. Sólo se usa una vez */
+		#pa{
+			 font-style: oblique; 
+			 background-color: grey;
+		}
+
+		/* Creación de clases para los estilos. Se le aplicará a aquellas etiquetas que nos interese */
+		.cab1 {
+			text-decoration: underline;/*subrayado*/
+			color: brown;
+			font-style: italic; /*Cursiva */
+			font-weight: bold; /*Negrita */
+		}
+
+		.p1 {
+			color: #6567B3;
+			font-weight: bold; /*negrita*/
+			font-style: italic;
+			text-align: right;
+		}
+		.p2 {
+			color: red;
+			text-indent: 50px;
+			margin-left: 50px;
+			text-align: justify;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<!-- El atributo title aparecerá al colocar el puntero sobre el título h1-->
+	<h1 title="Atributos">ATRIBUTOS BASICOS EN HTML </h1>
+
+	<h2> Atributos id, class, style y title</h2>
+
+	<h3 class="cab1">ATRIBUTO ID</h3>
+		<p class="p1">Establece un identificar único a cada elemento dentro de una página html</p>
+
+	<h3 class="cab1">ATRIBUTO CLASS</h3>
+		<p class="p1">Establece la clase CSS que se aplica a los estilos del elemento. <br>
+		Si un elemento tiene es por ejemplo un título y también se le asignó una class, se le aplicarán las características de la class, siempre <b> formateo por proximididad</b></p>
+
+	<H3 class="cab1">ATRIBUTO STYLE</H3>
+		<p class="p1">Establece de forma directa los estilos CSS indicados para una etiqueta concreta, aquella que lleve el atributo Style. Si quisiéramos aplicar eses formatos a todos los elementos de ese tipo mejor hacerlo con el atributo class</p>
+
+	<h3 class="cab1">ATRIBUTO TITLE</h3>
+		<p class="p1" ">Aparece un pequeño texto al poner el puntero encima de ese elemento. Aumenta la claridad de la web y facilita su navegación</p>
+
+	<h2> Y probamos también con unos párrafos </h2>
+
+		<p class="p2">Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Debitis nisi sequi non dolorem quos odio magnam! Labore sint perferendis, deserunt rem nisi facere fuga ullam impedit praesentium, nemo, autem aliquid.</p>
+
+		<p class="p2">Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Nam, animi repellendus exercitationem, nihil, eaque doloribus, facilis placeat error possimus voluptatum porro consequuntur enim obcaecati a necessitatibus quisquam molestiae in veniam.</p>
+
+		<p id="pa" class="p2">Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Vero atque hic, rem placeat adipisci esse tempore, dicta voluptates ducimus maiores reiciendis nemo exercitationem culpa aspernatur illum distinctio expedita totam minima.</p>
+
+</body>
+</html>

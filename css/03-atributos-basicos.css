@@ -1,0 +1,24 @@
+h1 {color:red ;}
+/* Fichero que contiene los estilos css */
+/* un elemento css:
+selector {
+propiedad: valor;
+....
+}
+*/
+#t1 {
+	text-align: right;
+	color: blue;
+
+}
+#t2 {
+	text-decoration: underline;/*subrayado*/
+}
+
+.p1 {
+	color: #6567B3;
+	font-weight: bold; /*negrita*/
+}
+.p2 {
+	color: tomato;
+}

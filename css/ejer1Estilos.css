@@ -1,0 +1,27 @@
+	
+		#cabecera1 {
+			background-color: yellow;
+			margin-left: 100px;
+			font-style: italic;
+			color: red;
+			font-family: Verdana;
+			text-align: center;
+			}
+
+		
+		.formatoTitulos1 {
+			background-color: #D6F4D7;
+			color: #1E7510;
+			margin-left: 75px;
+			text-align: justify;
+			font-style: italic;
+			margin-right: 150px;
+			text-decoration: underline;
+			text-decoration-style: double;
+			}
+
+		.formatoParrafos {
+			margin-left: 25px;
+			text-align: justify;
+		}
+
