@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Atributos básicos html</title>
+	<style>
+		/* un elemento css:
+			selector {
+					propiedad: valor;
+					....
+			}
+		*/
+		/* Vamos a probar el atributo id --> pondremos cada cabecera de un color diferente
+			#Identificador{propiedad:valor;}	*/
+		#cab1 {	
+			color:blue; 
+			font-size: 3em;
+		}
+		#cab2 {
+			color:green;
+		}
+		#cab3 {
+			color:pink;
+		}
+		#cab4 {
+			color:grey;
+		}
+		#cab5 {
+			color:orange;
+		}
+
+		/*
+		 si quisiéramos ponerle ciertos formatos a todos los títulos, mejor creo una clase y se los asigno
+		 	.clase{propiedad:valor ;}
+		 */
+
+		.subtitulos1 {
+			text-align: center;
+			text-decoration: underline;
+			}
+
+		.subtitulos2 {
+			text-align: right;	/*Alineado a la derecha*/
+			text-decoration: underline; /*Subrayado */
+			font-style: italic; /*Cursiva */
+			font-weight: bold; /*NEgrita */
+			}
+		.parrafo{
+			text-align: justify;
+			font-style: italic;
+			background-color: #F5D1D7;
+			border-bottom-right-radius: 
+			border-style: #560455
+		}
+
+	</style>
+</head>
+<body>
+	<h1 id="cab1" title="elemento h1">Atributos básicos html</h1>
+
+	<h2 id="cab2" class="subtitulos1"  title="elemento h2">Atributo: id</h2>
+	<h2 id="cab3" class="subtitulos1" >Atributo: class</h2>
+	<h2 id="cab4" class="subtitulos1" >Atributo: title</h2>
+	<h2 id="cab5" class="subtitulos1" >Atributo: style</h2>
+     
+     <!--Aqui aplicaremos directamente ciertos formatos a un párrafo concreto, entonces uso el atributo style sobre esa etiqueta. -->
+	<h3 class="subtitulos2">1er. Párrafo: </h3>
+		<p title="Definicion de Párrafo" class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Cupiditate totam optio dolorem animi ullam inventore architecto quisquam ad nam neque molestias tenetur quam ratione exercitationem, enim illum corrupti beatae repellendus?</p>
+
+	<h3 class="subtitulos2"> 2º Párrafo: </h3>
+		<p title="párrafo formateado" class="parrafo">Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Est, aliquam, commodi pariatur possimus incidunt necessitatibus! Nulla, iste, qui. Ullam ex distinctio necessitatibus ducimus doloremque quam eos veniam inventore sapiente, quis!</p>
+
+</body>
+</html>
