@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Una imagen de fondo de mi web</title>
+	<style type="text/css">
+		/*El fondo de la web será una imagen que no se repetirá y tendrá tamaño del 100% */
+		body{
+			background-image: url("../Imagenes/FondoAgua.webp");
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+		/*El título tiene una imagen de fondo, no se repetirá, tamaño 100% */
+		h1{
+			background-image: url("../Imagenes/FondoBonito.jpg");
+			background-repeat: no-repeat;
+			font-family: "Comic sans ms";
+			color:#151DB8;
+			line-height: 100px;  /*El alto de la línea */
+			margin-right: 500px;
+		}
+		dt {
+			font-style: italic;
+		}
+		.negrita{
+			font-weight: bold;
+		}
+
+
+	</style>
+</head>
+<body>
+	<h1> &nbsp; MENU </h1>  <!-- código para un espacio en blanco -->
+	
+	<ul>
+		<li> Inicio </li>
+		<li> Noticias </li>
+			<ul> 
+				<li> <a href="https://elpais.com/" target="_blank"> Recientes </a></li>
+				<li> <a href="https://www.lavozdegalicia.es" target="_blank"> Más leídas </a></li>
+				<li> <a href="https://www.marca.com/" target="_blank">Más valoradas </a></li>
+			</ul>
+		<li> Artículos </li>
+			<ol>
+				<li class="negrita"> XHTML</li>
+				<li> CSS</li>
+				<li> JavaScript</li>
+				<li> Otros </li>
+			</ol>
+		<li> Contacto </li>
+			<dl>
+				<dt> Email </dt>
+					<dd class="negrita"> nombre@dirección.com</dd>
+				<dt> Teléfono </dt>
+					<dd> 900 900 900</dd>
+				<dt> Fax </dt>
+					<dd> 900 900 900</dd>	
+
+			</dl>
+	</ul>
+
+	
+
+</body>
+</html>

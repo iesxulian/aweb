@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Listas en HTML</title>
+	<style type="text/css">
+		/** Estilos para las viñetas -*/
+		.listaDesordenada{
+			list-style-type: circle;		
+		}
+		#listaOrdenada{
+			list-style-type: lower-greek;
+		}
+
+		.Sublista{
+			list-style-type: lower-alpha ;
+		}
+
+		#listaPersonal{
+			list-style-image: URL("../Imagenes/IconoLista1.PNG");
+		}
+	</style>
+
+
+
+</head>
+<body>
+	<h1> LISTAS EN HTML </h1>
+	<!-- Si quisiera poner 6 veces el mismo texto haría: ul>li{texto}*6	-->
+
+	<h3> Listas desordenadas (ul)</h3>
+		<ul class="listaDesordenada">
+			<li>Estoy aqui</li>
+			<li>Estoy aqui</li>
+			<li>Estoy aqui</li>
+			<li>Estoy aqui</li>
+			<li>Estoy aqui</li>
+			<li>Estoy aqui</li>
+			<li>Estoy aqui</li>
+			<li>Estoy aqui</li>
+			<li>Estoy aqui</li>
+		</ul>
+
+	<h3> Listas ordenadas (ol)</h3>
+		<ol id="listaOrdenada">
+			<li>Sigo aún</li>
+			<li>Sigo aún</li>
+			<li>Sigo aún</li>
+			<li>Sigo aún</li>
+			<li>Sigo aún</li>
+			<li>Sigo aún</li>
+			<li>Sigo aún</li>
+			<li>Sigo aún</li>
+			<li>Sigo aún</li>
+		</ol>
+
+	<h3> Listas anidadas</h3>
+		<ol>
+			<li> Los seres vivos</li>
+				<ol class="Sublista"> 
+					<li> las plantas</li>
+					<li> los animales</li>
+						<ul class="listaDesordenada">
+							<li> Mamíferos </li>
+							<li> Aves </li>
+							<li> Reptiles </li>
+						</ul>
+				</ol>
+			<li> Seres muertos</li>
+				<ol class="Sublista">
+					<li> Rocas </li>
+					<li> Minerales </li>
+				</ol>
+		</ol>
+
+	<h3> Listas personalizadas</h3>
+	<ul id="listaPersonal">
+		<li> Primer texto</li>
+		<li> Primer texto</li>
+		<li> Primer texto</li>
+		<li> Primer texto</li>
+		<li> Primer texto</li>
+	</ul>
+
+</body>
+</html>
