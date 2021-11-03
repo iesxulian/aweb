@@ -1,0 +1,30 @@
+		body {
+			background-color: #F4E9DD;
+			font-family: Arial;
+			line-height: 20px;
+		}	
+		ul{
+			list-style-type: square;
+
+		}	
+		h2{
+			font-family: comic-sans-Ms;
+			font-size: 1.25em;
+			color: #815555;
+		}
+		span{
+			background-color: #DAD7D7;
+			font-size: 1.25em;
+
+		}
+		p{
+			text-align: justify;
+		}
+		a {
+			text-decoration: none;
+			font-weight: bold;
+		}
+		.negrita{
+			font-weight: bold;
+			color: #634747;
+		}
