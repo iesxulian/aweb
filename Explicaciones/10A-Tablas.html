@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Ejemplo de una tabla sencilla </title>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+			color: #AD239B;
+		}
+
+		.tabla {			 
+			width: 40%; /*Ancho da táboa */
+			border: 4px solid green;  /*borde*/
+			margin: auto; /* centrado da estructura*/
+			spacing: 100px;
+			
+		}
+		/*Relleno de la fila */
+		th {
+			background-color: #B8FBC8;
+		}
+		.col1{
+			font-style: italic;
+		}
+		td,th{
+			text-align: center;
+			border: 1px solid green;
+			}
+	</style>
+
+</head>
+<body>
+
+	<h1>Listado de cursos disponibles para el TRIM-1</h1>
+
+	<table class="tabla">
+		<tr>
+			<!-- th es la etiqueta para indicar títulos de columnas, van en negrita y centrado --> 
+			<th> Curso </th>
+			<th> Duración (horas) </th>
+			<th> Horario </th>
+		</tr>
+
+		<tr>
+			<td class="col1">CSS</td>
+			<td>20</td>
+			<td>16:00 - 20:00</td>
+		</tr>
+
+		<tr>
+			<td class="col1">HTML</td>
+			<td>20</td>
+			<td>16:00 - 20:00</td>
+		</tr>
+
+		<tr>
+			<td class="col1">Dreamweaver</td>
+			<td>15</td>
+			<td>16:00 - 20:00</td>
+		</tr>
+	</table>
+
+	<h1>Listado resumido para el TRIM-1</h1>
+
+	<table class="tabla">
+		<tr>
+			<!-- th es la etiqueta para indicar títulos de columnas, van en negrita y centrado --> 
+			<th> Curso </th>
+			<th> Duración (horas) </th>
+			<th> Horario </th>
+		</tr>
+
+		<tr>
+			<!--rowspan para combinar filas	-->
+			<td class="col1">CSS</td>
+			<td rowspan="2">20</td>
+			<td rowspan="3">16:00 - 20:00</td>
+		</tr>
+
+		<tr>
+			<td class="col1">HTML</td>			
+		</tr>
+
+		<tr>
+			<td class="col1">Dreamweaver</td>
+			<td>15</td>
+		</tr>
+	</table>
+
+	<h1>Listado semanal para el TRIM-1</h1>
+
+	<table class="tabla">
+		<tr>
+			<!--colspan para combinar columnas	-->
+			<th colspan="2">Semana: 1</th>
+		</tr>
+		<tr>
+			<th colspan="2">Curso: CSS</th>			
+		</tr>
+		<tr>
+			<td>L-M-V</td>	
+			<td>M-J</td>		
+		</tr>
+		<tr>
+			<td>16:00 a 20:00</td>	
+			<td>17:00 a 21:00</td>		
+		</tr>
+	</table>
+		
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejemplo de una tabla sencilla</title>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+			color: red;
+		}
+		.tabla{
+			border: 6px solid green;
+			margin: auto;
+			caption-side: bottom;	
+			border-collapse: separate;
+			border-spacing: 40px;
+			}
+
+		th{
+			background-color: #C8F2CD;
+
+		}
+		td{
+			text-align: center;
+			border: 2px green;
+		}
+		.columna1{
+			font-style: italic;
+		}
+		tr th, tr td{
+			border:  2px solid green;
+			padding: 20px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1> Listado de cursos disponibles para el TRIM-1</h1>
+	<br>
+		<table class="tabla">
+			<caption> Figura 1</caption>
+			<tr>
+				<th> Curso</th>
+				<th> Duración (horas)</th>
+				<th> Horario </th>
+			</tr>
+		 	<tr>
+				<td class="columna1"> CSS </td>
+				<td> 20</td>
+				<td> 16:00 a 20:00</td>
+			</tr>
+			<tr>
+				<td class="columna1"> HTML </td>
+				<td> 20</td>
+				<td> 16:00 a 20:00</td>
+			</tr>
+			<tr>
+				<td class="columna1"> DreamWeaver </td>
+				<td> 15</td>
+				<td> 16:00 a 20:00</td>
+			</tr>
+
+		</table>
+
+		<h1> Listado resumido para el TRIM-1</h1>
+	<br>
+		<table class="tabla">
+			<tr>
+				<th> Curso</th>
+				<th> Duración (horas)</th>
+				<th> Horario </th>
+			</tr>
+		 	<tr>
+				<td class="columna1"> CSS </td>
+				<td rowspan="2"> 20</td>
+				<td rowspan="3"> 16:00 a 20:00</td>
+			</tr>
+			<tr>
+				<td class="columna1"> HTML </td>
+			</tr>
+			<tr>
+				<td class="columna1"> DreamWeaver </td>
+				<td> 15</td>
+			</tr>
+
+		</table>
+
+<h1> Listado semanal para el TRIM-1</h1>
+	<br>
+		<table class="tabla">
+			<tr>
+				<th colspan="2"> Semana: 1</th>
+			</tr>
+		 	<tr>
+				<th colspan="2"> Curso: CSS</th>			
+			</tr>
+			<tr>
+				<td> L-M-V </td>
+				<td> M-J </td>
+			</tr>
+			<tr>
+				<td> 16:00 a 20:00 </td>
+				<td> 16:00 a 20:00</td>
+			</tr>
+
+		</table>
+
+</body>
+</html>
