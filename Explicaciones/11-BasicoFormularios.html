@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FORMULARIO BASICO EN HTML</title>
+	<style type="text/css">
+		.campos {
+			margin-bottom: 10px; /*Separación vertical entre los campos */
+		}
+		label {
+			font-size: 1.25rem;
+			font-style: italic;
+			color: #863D3D;
+			font-weight: bold;
+		}
+		label.etiqueta {
+			display: block;  /*asi conseguimos que el recuadro esté debajo de la etiqueta */
+		}
+		#contenedor{  /*maquetado del formulario */
+			max-width: 60%;
+			margin: auto;
+			border: 2px solid brown;
+			padding: 15px;
+			background-color: #F4DBDB;
+		}
+		h1{
+			color: brown;
+			font-style: italic;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<!--Metemos todo el formulario en un div al que le asignamos un identificador con unos formatos concretos -->
+	<div id="contenedor">
+	<h1>
+		FORMULARIOS EN HTML
+	</h1>
+	
+	<!-- Inicio de la descripcion del formulario 
+	  action: nombre del fichero .php que recibirá los datos del formulario. Si lo dejamos en blanco "" los datos los recibirá esta misma web, aparecerán en la barra de direcciones -en la URL- 
+	  method: forma en la que se enviarán los datos al servidor. GET/POST. Con GET se mostrarían en la URL y con POST no se verían, los datos no van en la URL sino en las cabeceras de los paquetes, ocultos.-->
+
+	<form action="11-RecibeDatosFormulario.php" method="post" enctype="multipart/form-data">
+		<!-- creamos varios ejemplos para los campos de texto 
+		  etiqueta input y luego el tipo de elemento y otros atributos. esta etiqueta es una etiqueta vacía, que no se cierra--> 
+
+		Nombre completo: <input type="text" name="cnome" size="30" maxlength="30" required />
+		<br><br>
+		E-mail.........: <input type="text" name="cemail" size="30" maxlength="30" required />
+		<br><br>
+		Contraseña.....: <input type="password" name="cclave" size="10" maxlength="10" required />
+		<br><br>
+		Edad actual....: <input type="number" name="cidade" size="3" maxlength="3" />
+		<br><br>
+		Provincia......: <input type="text" name="cprovincia" size="15" maxlength="15" value="A Coruña" />
+		<br><br>
+
+		<!-- Vamos emplear la etiqueta label para dar título a cada campo y así podemos usar class/id para darle formateo, empleando los estilos. Usaremos la etiqueta div (es un contenedor que agrupará etiquetas para maquetar los campos). 
+		el valor del atributo for para la etiqueta label deberá coincidir con el valor del atributo id de input para que ambos se asocien y además luego haciendo clic en el texto de label se posiciona el foco en el botón input correspondiente.	
+		Atributo placeholder="texto que se mostrará en el botón input correspondiente"-->
+	<fieldset>
+		<legend> Datos personales </legend>
+		<div class="campos">
+			<label class="etiqueta" for="cnome" > Nombre completo: </label>
+			<input type="text" id="cnome" name="cnome" size="30" maxlength="30" placeholder="Pon tu nombre"/> 
+		</div>
+		<div class="campos">
+			<label class="etiqueta" for="cmail"> E-mail: </label>
+			<input type="email" id="cmail" name="cemail" size="30" maxlength="30" placeholder="Introduce tu correo electronico" required /> * Obligatorio
+		</div>
+		<div class="campos">
+			<label class="etiqueta" for="cclave">Contraseña: </label>
+			<input type="password" id="cclave" name="cclave" size="10" maxlength="10" required /> *Obligatorio
+		</div>
+		<div class="campos">
+			<label class="etiqueta" for="cidade">Edad actual: </label>
+			<input id="cidade" type="number" name="cidade" />
+		</div>
+	</fieldset>
+		<!-- Ejemplos de casillas de verificación. Value="valor que se envía al servidor", es obligatorio; name="nombre[]" se enviarán como un array, una colección de valores, se envían los valores puestos en value. si quisiera enviarlos para tratarlos de forma independiente es mejor enviarlos como una variable y no como un array -->
+	<fieldset>
+		<legend> ¿Qué practicas? </legend>
+		<div class="campos">
+			<label class="etiqueta">Deportes que practicas: </label>
+
+			<input id="cfutbol" type="checkbox" value="F" name="dep[]">
+			<label for="cfutbol">Fútbol</label>
+
+			<input id="cbalon" type="checkbox" value="B" name="dep[]">
+			<label for="cbalon">Baloncesto</label>
+			
+			<input id="ctenis" type="checkbox" value="T" name="dep[]">
+			<label for="ctenis">Tenis</label>
+			
+			<input id="cnatacion" type="checkbox" value="N" name="dep[]">
+			<label for="cnatacion">Natación</label>
+			
+			<input id="cninguno" type="checkbox" value="0" name="dep[]" checked="checked">
+			<label for="cninguno">Ninguno</label>
+			<!-- o atributo checked permite marcar por defecto unha opción de checkbox -->
+		</div>	
+	</fieldset>
+
+		<!-- Ejemplos de botones de opción. los botones que sean del mismo grupo tendrán el mismo name,de esta forma los agrupa. Cada grupo de opciones irán agrupadas bajo el mismo name--> 
+	<fieldset>
+	  <legend> Sexo: </legend>	
+		<div class="campos">
+			<label class="etiqueta">Sexo: </label>
+
+			<input id="chome" type="radio" name="sexo" value="H">
+			<label for="chome">Home</label>
+
+			<input id="cmuller" type="radio" name="sexo" value="M">
+			<label for="cmuller">Muller</label>
+			<!-- o atributo checked permite marcar por defecto unha opción de radio -->
+		</div>	
+	</fieldset>
+		<!--Ejemplo de listas desplegables --> 
+		<div class="campos">
+			<label class="etiqueta" for="cprov">Provincia</label>
+
+			<select name="prov" id="cprov">
+				<option value="">- Seleccione una provincia -</option>
+				<option value="CO">A Coruña</option>
+				<option value="LU">Lugo</option>
+				<option value="OU">Ourense</option>
+				<option value="PO">Pontevedra</option>
+			</select>
+			<!-- por defecto sempre está seleccionada a primeira opción das option, por iso a primeira non debe ser unha opción de datos seleccionable, poñemos un texto-->
+			<!-- o atributo selected na etiqueta option permite marcar por defecto esa opción da select -->
+		</div>
+
+		<!--Ejemplo de lista con las opciones visibles, barras de desplazamiento verticales y se pueden seleccionar varias opciones pulsando CTRL. Se envía una colección de datos (un array) y los valores que se mandan es lo indicado en el value. optgroup permite agrupar, tb se podría usar en la lista desplegable -->
+		<fieldset>
+			<legend> ¿cuál es tu sistema operativo? </legend>
+		<div class="campos">
+			<label class="etiqueta" for="cso">Sistemas Operativos</label>
+			<select name="so[]" id="cso" multiple size="7">  <!--Multiple para elegir varios, size para indicar cuántos se ven -->
+				<optgroup label="Windows" >
+					<option value="w10">Windows 10</option>
+					<option value="w8">Windows 8</option>
+					<option value="ws">Windows Server</option>
+				</optgroup>
+				<optgroup label="Outros">
+					<option value="lx">Linux</option>
+					<option value="mac">MACOS</option>
+					<option value="ot">Outros</option>
+				</optgroup>
+			</select>
+		</div>
+	</fieldset>
+		<!--Ejemplo de textarea. Para controlar el tamaño del textarea es mejor hacerlo con css, ya que las cols no equivales a columnas tal cual -->
+		<div class="campos">
+			<label class="etiqueta" for="ccoment">Comentario</label>
+			<textarea name="coment" id="ccoment" cols="50" rows="5"></textarea>
+		</div>
+
+		<!-- Botones de enviar datos y resetear el formulario -->
+		<div class="campos">
+			<input type="submit" value="Enviar Datos" >
+			<input type="reset" value="Borrar Datos">
+		</div>
+
+		<!--Botón para adjuntar un archivo, es obligatorio añadir enctype="multipart/form-data" en la etiqueta form -->
+		<div class="campos">
+			<label class="etiqueta" for="fichero"> Adjuntar un fichero </label>
+			<input type="file" name="fichero">
+
+			<!-- Subir varios ficheros -->
+			<label class="etiqueta" for="variosficheros"> Puedes subir varios ficheros </label>
+			<input type="file" name="variosficheros[]" multiple >
+
+			<!-- Subir ficheros de un determinado tipo -->
+			<label class="etiqueta" for="variosficherosTipo"> Subir archivos pdf </label>
+			<input type="file" name="variosficheros[]" multiple accept=".pdf">
+		</div>
+
+		<!--ejemplo de personalización de un botón del formulario con una imagen concreta -->
+		<div class="campos">
+			<input type="image" name="Aceptar" src="../Imagenes/enviar_formulario.png" width="15%" >
+			<input type="image" name="Borrar" src="../Imagenes/borrar.jpg" width="10%">			
+		</div>
+	</form>
+	</div>
+</body>
+</html>

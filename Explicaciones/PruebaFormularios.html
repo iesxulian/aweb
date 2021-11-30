@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		.campos {
+			margin-bottom: 10px; /*Separación entre los campos */
+		}
+		label {
+			font-size: 1.25rem;
+			font-style: italic;
+			color: #863D3D;
+			font-weight: bold;
+		}
+		label.etiqueta {
+			display: block;  /*asi conseguimos que el recuadro esté debajo de la etiqueta */
+		}
+
+	</style>
+</head>
+<body>
+	<form action="11-RecibeDatosFormulario.php" method="GET" enctype="multipart/form-data">
+		Nombre completo: <input type="text" name="cnome" size="30" maxlength="30" required />
+		<br><br>
+		E-mail.........: <input type="text" name="cemail" size="30" maxlength="30" required />
+		<br><br>
+		Contraseña.....: <input type="password" name="cclave" size="10" maxlength="10" required />
+		<br><br>
+		Edad actual....: <input type="number" name="cidade" size="3" maxlength="3" />
+		<br><br>
+		Provincia......: <input type="text" name="cprovincia" size="15" maxlength="15" value="A Coruña" />
+		<br><br>
+
+		
+		<div class="campos">
+			<label class="etiqueta" for="cnome" > Nombre completo: </label>
+			<input type="text" id="cnome" name="cnome" size="30" maxlength="30" placeholder="Pon tu nombre"/> 
+	</div>
+		<div class="campos">
+			<label class="etiqueta" for="cmail"> E-mail: </label>
+			<input type="text" id="cmail" name="cemail" size="30" maxlength="30" placeholder="Introduce tu correo electronico" required /> * Obligatorio
+		</div>
+		<div class="campos">
+			<label class="etiqueta" for="cclave">Contraseña: </label>
+			<input type="password" id="cclave" name="cclave" size="10" maxlength="10" required /> *Obligatorio
+		</div>
+		<div class="campos">
+			<label class="etiqueta" for="cidade">Edad actual: </label>
+			<input id="cidade" type="number" name="cidade" />
+		</div>
+	
+		<!-- Ejemplos de casillas de verificación -->
+		<div class="campos">
+			<label class="etiqueta">Deportes que practicas: </label>
+			<input id="cfutbol" type="checkbox" value="F" name="dep[]">
+			<label for="cfutbol">Fútbol</label>
+			<input id="cbalon" type="checkbox" value="B" name="dep[]">
+			<label for="cbalon">Baloncesto</label>
+			<input id="ctenis" type="checkbox" value="T" name="dep[]">
+			<label for="ctenis">Tenis</label>
+			<input id="cnatacion" type="checkbox" value="N" name="dep[]">
+			<label for="cnatacion">Natación</label>
+			<input id="cninguno" type="checkbox" value="0" name="dep[]" checked="checked">
+			<label for="cninguno">Ninguno</label>
+			<!-- o atributo checked permite marcar por defecto unha opción de checkbox -->
+		</div>	
+
+		<!-- Ejemplos de botones de opción --> 
+		<div class="campos">
+			<label class="etiqueta">Sexo: </label>
+			<input id="chome" type="radio" name="sexo" value="H">
+			<label for="chome">Home</label>
+			<input id="cmuller" type="radio" name="sexo" value="M">
+			<label for="cmuller">Muller</label>
+			<!-- o atributo checked permite marcar por defecto unha opción de radio -->
+		</div>	
+
+		<!--Ejemplo de listas desplegables --> 
+		<div class="campos">
+			<label class="etiqueta" for="cprov">Provincia</label>
+			<select name="prov" id="cprov">
+				<option value="">- Seleccione una provincia -</option>
+				<option value="CO">A Coruña</option>
+				<option value="LU">Lugo</option>
+				<option value="OU">Ourense</option>
+				<option value="PO">Pontevedra</option>
+			</select>
+			<!-- por defecto sempre está seleccionada a primeira opción das option, por iso a primeira non debe ser unha opción de datos seleccionable, poñemos un texto-->
+			<!-- o atributo selected na etiqueta option permite marcar por defecto esa opción da select -->
+		</div>
+
+		<!--Ejemplo de lista con las opciones visibles, barras de desplazamiento verticales y se pueden seleccionar varias opciones pulsando CTRL -->
+
+		<div class="campos">
+			<label class="etiqueta" for="cso">Sistemas Operativos</label>
+			<select name="so[]" id="cso" multiple size="7">
+				<optgroup label="Windows" >
+					<option value="w10">Windows 10</option>
+					<option value="w8">Windows 8</option>
+					<option value="ws">Windows Server</option>
+				</optgroup>
+				<optgroup label="Outros">
+					<option value="lx">Linux</option>
+					<option value="mac">MACOS</option>
+					<option value="ot">Outros</option>
+				</optgroup>
+			</select>
+		</div>
+
+		<!--Ejemplo de textarea -->
+		<div class="campos">
+			<label class="etiqueta" for="ccoment">Comentario</label>
+			<textarea name="coment" id="ccoment" cols="50" rows="5"></textarea>
+		</div>
+
+		<!-- Botones de enviar datos y resetear el formulario -->
+		<div class="campos">
+			<input type="submit" value="Enviar Datos" >
+			<input type="reset" value="Borrar Datos">
+		</div>
+
+		<!--Botón para adjuntar un archivo, es obligatorio añadir enctype="multipart/form-data" en la etiqueta form -->
+		<div class="campos">
+			<label class="etiqueta" for="fichero"> Adjuntar un fichero </label>
+			<input type="file" name="fichero">
+
+			<!-- Subir varios ficheros -->
+			<label class="etiqueta" for="variosficheros"> Puedes subir varios ficheros </label>
+			<input type="file" name="variosficheros[]" multiple >
+
+			<!-- Subir ficheros de un determinado tipo -->
+			<label class="etiqueta" for="variosficherosTipo"> Subir archivos pdf </label>
+			<input type="file" name="variosficheros[]" multiple accept=".pdf">
+		</div>
+
+		<!--ejemplo de personalización de un botón del formulario con una imagen concreta -->
+		<div class="campos">
+			<input type="image" name="Aceptar formulario" src="img/enviar_formulario.png" width="15%" >
+			<input type="image" name="Borrar formulario" src="img/borrar.jpg" width="10%">			
+		</div>
+	</form>
+
+</body>
+</html>
